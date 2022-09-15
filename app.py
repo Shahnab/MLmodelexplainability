@@ -22,8 +22,6 @@ import random
 import numpy as np
 from io import StringIO
 
-
-
 def read_txt_and_pdplot(feature, test_X, ML_model):
                     feat_selected = st.selectbox('select base column name',
                             feature)
@@ -388,5 +386,7 @@ def main():
         st.code(code3, language='python')
 
 
+        st.image('https://assets-eu-01.kc-usercontent.com/3704723c-bfe7-01fd-0ea6-811f709c0da5/fbaba2e2-fbbe-41b8-a78e-5e42e01dbbe1/Dentsu%20Logo_White.png', width=250)
+        
 if __name__ == '__main__':
     main()
