@@ -29,8 +29,9 @@ def perm_import(
     perm = PermutationImportance(ml_model, scoring=score,
                                  random_state=1).fit(X_val, y_val)
     feat_name = X_val.columns.tolist()
-    eli5_show_weights = eli5.show_weights(perm, feature_names=feat_name)
-
+    #eli5_show_weights = eli5.show_weights(perm, feature_names=feat_name)
+    eli5_show_weights = eli5.explain_weights(perm, feature_names=feat_name)
+    
     importances = eli5.explain_weights_df(perm, feature_names=feat_name)
 
     if return_importances == True:
